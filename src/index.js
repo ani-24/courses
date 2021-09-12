@@ -4,8 +4,11 @@ const app = express();
 // Setting up the port
 const PORT = process.env.PORT || 3000;
 
+// Setting up the view engine
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.render("Hello, world!!!");
+  res.render("index");
 });
 
 app.listen(port, () => {
